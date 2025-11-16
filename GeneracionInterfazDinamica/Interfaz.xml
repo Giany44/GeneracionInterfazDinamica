@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Formulario Nombre="GestionProyectosXML">
+  
+  <MenuStrip>
+    <Menu Tipo="ToolStripMenuItem" Nombre="archivoMenu" Texto="Archivo">
+      <Menu Tipo="ToolStripMenuItem" Nombre="guardarItem" Texto="Guardar Tarea" ClickHandler="MenuItem_Click"/>
+      <Menu Tipo="ToolStripSeparator"/>
+      <Menu Tipo="ToolStripMenuItem" Nombre="salirItem" Texto="Salir" ClickHandler="MenuItem_Click"/>
+    </Menu>
+    <Menu Tipo="ToolStripMenuItem" Nombre="verMenu" Texto="Ver">
+      <Menu Tipo="ToolStripMenuItem" Nombre="resumenItem" Texto="Resumen de Proyectos" ClickHandler="MenuItem_Click"/>
+    </Menu>
+  </MenuStrip>
+
+  <Controles>
+    
+    <Control
+      Tipo="Label"
+      Nombre="lblTitulo"
+      Texto="Gestión de Tareas de Proyectos"
+      LocationX="10"
+      LocationY="35"
+      Width="400"
+      Height="25"
+      FontWeight="Bold"
+      FontSize="12"
+    />
+
+    <Control
+      Tipo="Panel"
+      Nombre="pnlAccionesTareas"
+      LocationX="10"
+      LocationY="65"
+      Width="600"
+      Height="55"
+      BackColor="White"
+      BorderStyle="FixedSingle"
+      >
+      
+      <Controles>
+        <Control
+          Tipo="Button"
+          Nombre="btnAnadir"
+          Texto="Añadir"
+          LocationX="10"
+          LocationY="5"
+          Width="120"
+          Height="40"
+          BackColor="Cyan"
+          ForeColor="Black"
+        />
+
+        <Control
+          Tipo="Button"
+          Nombre="btnEditar"
+          Texto="Editar"
+          LocationX="140"
+          LocationY="5"
+          Width="120"
+          Height="40"
+          BackColor="Indigo"
+          ForeColor="White"
+        />
+
+        <Control
+          Tipo="Button"
+          Nombre="btnEliminar"
+          Texto="Eliminar"
+          LocationX="270"
+          LocationY="5"
+          Width="120"
+          Height="40"
+          BackColor="SlateGray"
+          ForeColor="White"
+        />
+      </Controles>
+    </Control>
+    
+    <Control
+      Tipo="DataGridView"
+      Nombre="dgvTareas"
+      LocationX="10"
+      LocationY="130"
+      Width="600"
+      Height="200"
+      BackColor="Silver"
+    >
+        <Columna Nombre="ID Tarea" Tipo="TextBox" DataField="ID" Width="60" ReadOnly="True"/>
+        <Columna Nombre="Proyecto" Tipo="TextBox" DataField="Proyecto" Width="120" ReadOnly="True"/>
+        <Columna Nombre="Tarea" Tipo="TextBox" DataField="Tarea" Width="200" ReadOnly="False"/>
+        <Columna Nombre="Estado" Tipo="TextBox" DataField="Estado" Width="100" ReadOnly="False"/>
+        <Columna Nombre="Prioridad" Tipo="CheckBox" DataField="Prioridad" Width="80" ReadOnly="False"/>
+    </Control>
+
+  </Controles>
+</Formulario>
